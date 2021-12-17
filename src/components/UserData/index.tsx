@@ -1,17 +1,17 @@
-import React, { HtmlHTMLAttributes } from 'react';
+import React, { HtmlHTMLAttributes, useContext } from 'react';
+import UserContext from '../../providers/userDataProvider';
 
 import { UserDataContainer } from './styles';
 
 
 const UserData = () => {
+  const {user} = useContext(UserContext)
   return (
     <UserDataContainer>
-      
-        <p>Username: <span> MarioDoncel</span> </p>
-        <p>Company: <span> @INSS</span> </p>
-        <p>Location: <span> Brazil</span> </p>
-        <p>Blog:  <a href="https://www.blog.com">https://www.blog.com</a> </p>
-  
+        <p>Username: <span> {user.login? user.login : 'Search for a valid user!'}</span> </p>
+        <p>Company: <span> {user.company? user.company: 'None'}</span> </p>
+        <p>Location: <span> {user.location? user.location: 'None'}</span> </p>
+        <p>Blog:  <a href={user.blog? user.blog: '#'}>{user.blog? user.blog: 'None'}</a> </p>
     </UserDataContainer>
   );
 }

@@ -31,4 +31,10 @@ body{
     background: radial-gradient(68.98% 68.98% at 50% 13.36%, #75D6F4 2.3%, #010101 100%);
 }
 
+@media(min-width:600px){
+    :root{
+        font-size: 18px;
+    }
+}
+
 `

@@ -12,6 +12,7 @@ import {
         <Routes>
           <Route path="/" element={< Profile />}/>
           <Route path="/repositories" element={<Repositories />}/>
+          <Route path="/starred" element={<Repositories starred={true} />}/>
         </Routes>
       </BrowserRouter>
     )

@@ -17,7 +17,8 @@ export const ProfileContainer = styled.div`
     }
 
     .name{
-        margin-top: 100px;
+        
+        margin: 100px 10% 0;
         text-transform: uppercase;
         text-align:center;
         font-size:2.4rem;
@@ -37,5 +38,11 @@ export const ProfileContainer = styled.div`
         display: flex;
         width: 100%;
         justify-content: space-between;
+    }
+
+    @media(min-width:600px){
+        .container{
+            margin: 1.5rem auto
+        }
     }
 `;
