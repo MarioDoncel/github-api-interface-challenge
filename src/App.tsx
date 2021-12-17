@@ -7,14 +7,11 @@ import Theme from './styles/theme/'
 
 function App() {
   return (
-    <Fragment>
       <ThemeProvider theme={Theme}>
         <UserDataProvider>
           <Router />
         </UserDataProvider>
       </ThemeProvider>
-      
-    </Fragment>
   );
 }
 

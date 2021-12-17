@@ -1,4 +1,5 @@
 import {
+  HashRouter,
     BrowserRouter,
     Routes,
     Route,
@@ -8,13 +9,13 @@ import {
 
   export const Router = ()=>{
     return(
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={< Profile />}/>
           <Route path="/repositories" element={<Repositories />}/>
           <Route path="/starred" element={<Repositories starred={true} />}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 
